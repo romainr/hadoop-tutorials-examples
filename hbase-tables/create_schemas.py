@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #
 # Generates columns and cell data for an analytics tables of 1000+ columns
 # cf. url
