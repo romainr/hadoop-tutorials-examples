@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 #
 # Generates columns and cell data for an analytics tables of 1000+ columns
 # cf. url
@@ -11,7 +12,7 @@ import random
 
 random.seed(1)
 
-ROWS = 100
+ROWS = 1000
 HOURS = range(0, 25)
 DAYS = range(0, 366)
 COUNTRIES = ['US', 'France', 'Italy']
@@ -69,7 +70,7 @@ def generate_data(data_file):
     a = hours() + days() + total()
     f.write('\t'.join(get_domain(i) + map(str, itertools.chain.from_iterable(a))) + '\n')
 
-  print 'done'
+  print data_file + ' genererated'
 
 
 # Main
