@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 #
 # Generates columns and cell data for an analytics tables of 1000+ columns
 # cf. url
@@ -25,18 +24,18 @@ def columns_hours():
   FAMILLY = 'hour'
   cols = []
   for hour in HOURS:
-    cols.append('%s:%s-%s' % (FAMILLY, hour, 'total'))
+    cols.append('%s:%02d-%s' % (FAMILLY, hour, 'total'))
     for country in COUNTRIES:
-      cols.append('%s:%s-%s' % (FAMILLY, hour, country))
+      cols.append('%s:%02d-%s' % (FAMILLY, hour, country))
   return cols
 
 def columns_days():
   FAMILLY = 'day'
   cols = []
   for day in DAYS:
-    cols.append('%s:%s-%s' % (FAMILLY, day, 'total'))
+    cols.append('%s:%03d-%s' % (FAMILLY, day, 'total'))
     for country in COUNTRIES:
-      cols.append('%s:%s-%s' % (FAMILLY, day, country))
+      cols.append('%s:%03d-%s' % (FAMILLY, day, country))
   return cols
 
 def columns_total():
