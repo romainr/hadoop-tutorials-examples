@@ -1,0 +1,55 @@
+1. Install rsyslogd, edit its config file (/etc/rsyslog.conf), add the following lines at the very bottom, then restart rsyslogd.
+$ModLoad imudp $UDPServerAddress 127.0.0.1 $UDPServerRun 514
+
+2. Add the following to /etc/rsyslog.d/haproxy.conf:
+local6.*                                                /var/log/haproxy.log
+
+3. Create the file /tmp/haproxy.conf and add the following lines to it:
+
+global
+
+   daemon
+
+   nbproc 1
+
+   maxconn 100000
+
+   log 127.0.0.1 local6 debug
+
+defaults
+
+   option http-server-close
+
+   mode http
+
+   timeout http-request 5s
+
+   timeout connect 5s
+
+   timeout server 10s
+
+   timeout client 10s
+
+listen Hue 0.0.0.0:80
+
+   log global
+
+   mode http
+
+   stats enable
+
+   balance source
+
+   server hue1 hue-ha-test1-1.ent.cloudera.com:8888 cookie ServerA check inter 2000 fall 3
+   server hue2 hue-ha-test1-2.ent.cloudera.com:8888 cookie ServerB check inter 2000 fall 3
+
+4. Download and gunzip HAProxy from here: http://haproxy.1wt.eu/download/1.4/bin/haproxy-1.4.24-pcre-40kses-linux-i586.stripped.gz.
+
+5. Run ./haproxy-1.4.24-pcre-40kses-linux-i586.stripped -f /tmp/haproxy.conf
+
+6. Goto localhost:7000 and see that Hue is running. Show /var/log/haproxy.log.
+
+7. Go to http://hue-ha-test1-1.ent.cloudera.com:7180/ (admin:admin) and stop the Hue instance that you're on (probably will have to stop each instance to figure that out).
+
+8. Go to Hue (it should be down once). Refresh and show Hue is back up. Show /var/log/haproxy.log.
+
