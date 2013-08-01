@@ -1,13 +1,7 @@
-Blog URL
-========
-Coming soon
+How to
+======
 
-```
-git clone https://github.com/romainr/hadoop-tutorials-examples.git
-cd hive-udf
-```
-
-- Just use [myudf.jar](myudf.jar)
+- Just use the precompiled [myudfs.jar](myudfs.jar)
 
 - Or compile it with:
 ```
