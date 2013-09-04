@@ -1,4 +1,4 @@
-set hbase.zookeeper.quorum hue-search.ent.cloudera.com
+set hbase.zookeeper.quorum localhost
 
 CREATE TABLE top_cool_hbase (key string, value map<string, int>)
 STORED BY 'org.apache.hadoop.hive.hbase.HBaseStorageHandler'
