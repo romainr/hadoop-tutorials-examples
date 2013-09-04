@@ -29,9 +29,9 @@ USING org.apache.pig.piggybank.storage.avro.AvroStorage(
       {"name":"cool", "type":"int"},
       {"name":"user_id", "type":"string"}
       {"name":"review_id", "type":"string"},
+      {"name":"stars", "type":"int"},
       {"name":"text", "type":"string"},
       {"name":"business_id", "type":"string"},
-      {"name":"stars", "type":"int"},
       {"name":"date", "type":"string"},      
       {"name":"type", "type":"string"},
    ]}
