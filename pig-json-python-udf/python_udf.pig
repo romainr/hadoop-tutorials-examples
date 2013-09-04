@@ -1,3 +1,5 @@
+-- city, review_count, name, neighborhoods, type, business_id, full_address, state, longitude, stars, latitude, open, categories
+
 REGISTER 'converter.py' USING jython AS converter;
 
 
