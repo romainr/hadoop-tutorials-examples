@@ -4,8 +4,18 @@ REGISTER piggybank.jar
 
 data = load '/user/hive/warehouse/review/yelp_academic_dataset_review_clean.json'
     AS (funny:INT, useful:INT, cool:INT, user_id:CHARARRAY, review_id:CHARARRAY, text:CHARARRAY, business_id:CHARARRAY, stars:INT, date:CHARARRAY, type:CHARARRAY);
-    
-data_clean = FILTER data BY business_id IS NOT NULL AND text IS NOT NULL;    
+   
+data_clean = 
+  FILTER data
+  BY funny IS NOT NULL 
+  AND useful IS NOT NULL
+  AND cool IS NOT NULL
+  AND user_id IS NOT NULL
+  AND review_id IS NOT NULL
+  AND business_id IS NOT NULL
+  AND stars IS NOT NULL
+  AND date IS NOT NULL
+  AND type IS NOT NULL; 
     
 STORE data_clean INTO 'impala/reviews_avro'
 USING org.apache.pig.piggybank.storage.avro.AvroStorage(
