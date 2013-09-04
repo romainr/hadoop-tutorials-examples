@@ -1,9 +1,9 @@
-
 REGISTER piggybank.jar
 
 
 data = load '/user/hive/warehouse/review/yelp_academic_dataset_review_clean.json'
-    AS (funny:INT, useful:INT, cool:INT, user_id:CHARARRAY, review_id:CHARARRAY, text:CHARARRAY, business_id:CHARARRAY, stars:INT, date:CHARARRAY, type:CHARARRAY);
+    AS (funny:INT, useful:INT, cool:INT, user_id:CHARARRAY, review_id:CHARARRAY,
+        stars:INT, text:CHARARRAY, business_id:CHARARRAY, date:CHARARRAY, type:CHARARRAY);
    
 data_clean = 
   FILTER data
