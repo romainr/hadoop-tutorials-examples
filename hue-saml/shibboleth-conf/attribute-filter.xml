@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    This file is an EXAMPLE policy file.  While the policy presented in this 
+    example file is functional, it isn't very interesting.
+    
+    Deployers should refer to the Shibboleth 2 documentation for a complete list of components 
+    and their options.
+-->
+<afp:AttributeFilterPolicyGroup id="ShibbolethFilterPolicy"
+                                xmlns:afp="urn:mace:shibboleth:2.0:afp" xmlns:basic="urn:mace:shibboleth:2.0:afp:mf:basic" 
+                                xmlns:saml="urn:mace:shibboleth:2.0:afp:mf:saml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+                                xsi:schemaLocation="urn:mace:shibboleth:2.0:afp classpath:/schema/shibboleth-2.0-afp.xsd
+                                                    urn:mace:shibboleth:2.0:afp:mf:basic classpath:/schema/shibboleth-2.0-afp-mf-basic.xsd
+                                                    urn:mace:shibboleth:2.0:afp:mf:saml classpath:/schema/shibboleth-2.0-afp-mf-saml.xsd">
+
+    <!--  Release the transient ID to anyone -->
+    <afp:AttributeFilterPolicy id="releaseTransientIdToAnyone">
+        <afp:PolicyRequirementRule xsi:type="basic:ANY"/>
+
+        <afp:AttributeRule attributeID="transientId">
+            <afp:PermitValueRule xsi:type="basic:ANY"/>
+        </afp:AttributeRule>
+
+    </afp:AttributeFilterPolicy>
+
+    <afp:AttributeFilterPolicy id="releaseUidToAnyone">
+        <afp:PolicyRequirementRule xsi:type="basic:ANY"/>
+
+        <afp:AttributeRule attributeID="uid">
+            <afp:PermitValueRule xsi:type="basic:ANY"/>
+        </afp:AttributeRule>
+
+    </afp:AttributeFilterPolicy>
+
+    <!-- 
+        Release eduPersonEntitlement and the permissible values of eduPersonAffiliation
+        to three specific SPs
+    -->
+    <!--
+    <afp:AttributeFilterPolicy>
+        <afp:PolicyRequirementRule xsi:type="basic:OR">
+            <basic:Rule xsi:type="basic:AttributeRequesterString" value="urn:example.org:sp:Portal" />
+            <basic:Rule xsi:type="basic:AttributeRequesterString" value="urn:example.org:sp:SIS" />
+            <basic:Rule xsi:type="basic:AttributeRequesterString" value="urn:example.org:sp:LMS" />
+        </afp:PolicyRequirementRule>
+
+        <afp:AttributeRule attributeID="eduPersonAffiliation">
+            <afp:PermitValueRule xsi:type="basic:OR">
+                <basic:Rule xsi:type="basic:AttributeValueString" value="faculty" ignoreCase="true" />
+                <basic:Rule xsi:type="basic:AttributeValueString" value="student" ignoreCase="true" />
+                <basic:Rule xsi:type="basic:AttributeValueString" value="staff" ignoreCase="true" />
+                <basic:Rule xsi:type="basic:AttributeValueString" value="alum" ignoreCase="true" />
+                <basic:Rule xsi:type="basic:AttributeValueString" value="member" ignoreCase="true" />
+                <basic:Rule xsi:type="basic:AttributeValueString" value="affiliate" ignoreCase="true" />
+                <basic:Rule xsi:type="basic:AttributeValueString" value="employee" ignoreCase="true" />
+                <basic:Rule xsi:type="basic:AttributeValueString" value="library-walk-in" ignoreCase="true" />
+            </afp:PermitValueRule>
+        </afp:AttributeRule>
+
+    </afp:AttributeFilterPolicy>
+    -->
+
+    <!-- 
+        Release the given name of the user to our portal service provider
+    -->
+    <!--
+    <afp:AttributeFilterPolicy>
+        <afp:PolicyRequirementRule xsi:type="basic:AttributeRequesterString" value="urn:example.org:sp:myPortal" />
+
+        <afp:AttributeRule attributeID="givenName">
+            <afp:PermitValueRule xsi:type="basic:ANY" />
+        </afp:AttributeRule>
+    </afp:AttributeFilterPolicy>
+    -->
+
+</afp:AttributeFilterPolicyGroup>
