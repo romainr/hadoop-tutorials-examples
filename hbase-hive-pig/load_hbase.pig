@@ -1,7 +1,7 @@
 REGISTER /usr/lib/zookeeper/zookeeper-3.4.5-cdh4.3.0.jar
 REGISTER /usr/lib/hbase/hbase-0.94.6-cdh4.3.0-security.jar
 
-set hbase.zookeeper.quorum 'hue-search.ent.cloudera.com'
+set hbase.zookeeper.quorum 'localhost'
 
 data = LOAD 'hbase://top_cool'
        USING org.apache.pig.backend.hadoop.hbase.HBaseStorage('review:*', '-loadKey true')
