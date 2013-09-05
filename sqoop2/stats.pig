@@ -11,5 +11,12 @@ ratings =
     cool,
     stars;
   
-STORE ratings INTO 'review_stats' USING PigStorage(',');
+top = 
+  ORDER ratings
+  BY stars DESC;
+  
+top_1000 =
+  LIMIT top 1000;
+  
+STORE top_1000 INTO 'review_stats' USING PigStorage(',');
 
