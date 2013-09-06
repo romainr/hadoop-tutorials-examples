@@ -10,5 +10,7 @@ Source, data and tutorials of the Hue video series, the [Web UI for Apache Hadoo
 - [How to create example tables in HBase](http://gethue.tumblr.com/post/58181985680/hadoop-tutorial-how-to-create-example-tables-in-hbase) | [HBase tables](hbase-tables)
 - [Build and use a Hive UDF in 1 minute](http://gethue.tumblr.com/post/58711590309/hadoop-tutorial-hive-udf-in-1-minute) | [Hive UDF](hive-udf)
 
+Season 2
+- [1. Prepare the data for analysis with Pig and Python UDF](http://gethue.tumblr.com/post/60376973455/hadoop-tutorials-ii-1-prepare-the-data-for-analysis)
 
 Follow [@gethue](https://twitter.com/gethue)
