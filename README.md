@@ -11,6 +11,6 @@ Source, data and tutorials of the Hue video series, the [Web UI for Apache Hadoo
 - [Build and use a Hive UDF in 1 minute](http://gethue.tumblr.com/post/58711590309/hadoop-tutorial-hive-udf-in-1-minute) | [Hive UDF](hive-udf)
 
 Season 2
-- [1. Prepare the data for analysis with Pig and Python UDF](http://gethue.tumblr.com/post/60376973455/hadoop-tutorials-ii-1-prepare-the-data-for-analysis)
+- [1. Prepare the data for analysis with Pig and Python UDF](http://gethue.tumblr.com/post/60376973455/hadoop-tutorials-ii-1-prepare-the-data-for-analysis) | [Pig Python UDF and Json](pig-json-python-udf)
 
 Follow [@gethue](https://twitter.com/gethue)
