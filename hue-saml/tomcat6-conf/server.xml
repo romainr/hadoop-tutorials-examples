@@ -98,7 +98,7 @@
                SSLEnabled="true"
                clientAuth="want"
                keystoreFile="/opt/shibboleth-idp/credentials/idp.jks"
-               keystorePass="dragonballz" />
+               keystorePass="hue" />
 
     <!-- An Engine represents the entry point (within Catalina) that processes
          every request.  The Engine implementation for Tomcat stand alone
