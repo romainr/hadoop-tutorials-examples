@@ -11,8 +11,11 @@ List of all [tutorials](http://gethue.tumblr.com/tagged/tutorial).
 - [High Availability of Hue](http://gethue.tumblr.com/post/57817118455/hadoop-tutorial-high-availability-of-hue) | [Hue HA](hue-ha)
 - [How to create example tables in HBase](http://gethue.tumblr.com/post/58181985680/hadoop-tutorial-how-to-create-example-tables-in-hbase) | [HBase tables](hbase-tables)
 - [Build and use a Hive UDF in 1 minute](http://gethue.tumblr.com/post/58711590309/hadoop-tutorial-hive-udf-in-1-minute) | [Hive UDF](hive-udf)
+- [The Web UI for HBase: HBase Browser](http://gethue.tumblr.com/post/59071544309/the-web-ui-for-hbase-hbase-browser)
 
 Season 2
 - [1. Prepare the data for analysis with Pig and Python UDF](http://gethue.tumblr.com/post/60376973455/hadoop-tutorials-ii-1-prepare-the-data-for-analysis) | [Pig Python UDF and Json](pig-json-python-udf)
+- [2. Execute Hive queries and schedule them with Oozie](http://gethue.tumblr.com/post/60937985689/video-series-ii-2-execute-hive-queries-and-schedule)
+
 
 Follow [@gethue](https://twitter.com/gethue)
