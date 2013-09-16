@@ -2,8 +2,7 @@ package rkanter;
 
 public class MyELFunctions {
     /**
-     * Compares two strings while ignoring case. <p/> A string with <code>null</code> value is considered as an empty
-     * string.
+     * Compares two strings while ignoring case.
      *
      * @param s1 first string.
      * @param s2 second string.
@@ -11,10 +10,7 @@ public class MyELFunctions {
      */
     public static boolean equalsIgnoreCase(String s1, String s2) {
         if (s1 == null) {
-            s1 = "";
-        }
-        if (s2 == null) {
-            s2 = "";
+            return (s2 == null);
         }
         return s1.equalsIgnoreCase(s2);
     }
