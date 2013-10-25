@@ -16,6 +16,13 @@ List of all [tutorials](http://gethue.tumblr.com/tagged/tutorial).
 Season 2
 - [1. Prepare the data for analysis with Pig and Python UDF](http://gethue.tumblr.com/post/60376973455/hadoop-tutorials-ii-1-prepare-the-data-for-analysis) | [Pig Python UDF and Json](pig-json-python-udf)
 - [2. Execute Hive queries and schedule them with Oozie](http://gethue.tumblr.com/post/60937985689/video-series-ii-2-execute-hive-queries-and-schedule)
+- [3. Schedule Hive queries with Oozie coordinators](http://gethue.tumblr.com/post/61597968730/hadoop-tutorials-ii-3-schedule-hive-queries-with)
+- [4. Fast SQL with the Impala Query Editor](http://gethue.tumblr.com/post/62452792255/fast-sql-with-the-impala-query-editor)
+- [5. Bundle Oozie coordinators with Hue](http://gethue.tumblr.com/post/63988110361/hadoop-tutorial-bundle-oozie-coordinators-with-hue)
+- [6. Use Pig and Hive with HBase](http://gethue.tumblr.com/post/64707633719/hadoop-tutorial-use-pig-and-hive-with-hbase)
 
 
 Follow [@gethue](https://twitter.com/gethue)
+
+![image](statis/hue-3.5.png?raw=true)
+
