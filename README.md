@@ -2,6 +2,7 @@ Hadoop Tutorials and Examples
 =============================
 
 Source, data and tutorials of the Hue video series, the [Web UI for Apache Hadoop](http://gethue.com).
+Follow [@gethue](https://twitter.com/gethue)
 
 List of all [tutorials](http://gethue.tumblr.com/tagged/tutorial).
 
@@ -20,9 +21,6 @@ Season 2
 - [4. Fast SQL with the Impala Query Editor](http://gethue.tumblr.com/post/62452792255/fast-sql-with-the-impala-query-editor)
 - [5. Bundle Oozie coordinators with Hue](http://gethue.tumblr.com/post/63988110361/hadoop-tutorial-bundle-oozie-coordinators-with-hue)
 - [6. Use Pig and Hive with HBase](http://gethue.tumblr.com/post/64707633719/hadoop-tutorial-use-pig-and-hive-with-hbase)
-
-
-Follow [@gethue](https://twitter.com/gethue)
 
 ![image](static/hue-3.5.png?raw=true)
 
