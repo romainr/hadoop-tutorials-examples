@@ -24,5 +24,5 @@ Season 2
 
 Follow [@gethue](https://twitter.com/gethue)
 
-![image](statis/hue-3.5.png?raw=true)
+![image](static/hue-3.5.png?raw=true)
 
