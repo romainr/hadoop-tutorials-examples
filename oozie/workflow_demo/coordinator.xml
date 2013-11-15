@@ -1,0 +1,28 @@
+<coordinator-app name="DailySleep"
+  frequency="${coord:days(1)}"
+  start="2013-06-01T00:00Z" end="2013-06-05T00:00Z" timezone="America/Los_Angeles"
+  xmlns="uri:oozie:coordinator:0.2">
+  <datasets>
+    <dataset name="sleep_time" frequency="${coord:days(1)}"
+             initial-instance="2012-05-31T00:00Z" timezone="America/Los_Angeles">
+      <uri-template>/user/romain/words/201207${DAY}</uri-template>
+      <done-flag></done-flag>
+    </dataset>
+  </datasets>
+  <output-events>
+    <data-out name="DAILY_WORDS" dataset="sleep_time">
+    <instance>${coord:current(0)}</instance>
+    </data-out>
+  </output-events>
+  <action>
+    <workflow>
+      <app-path>...workflow.xml</app-path>
+      <configuration>
+        <property>
+          <name>input</name>
+          <value>${coord:dataOut('DAILY_WORDS')}</value>
+        </property>
+      </configuration>
+   </workflow>
+  </action>
+</coordinator-app>
