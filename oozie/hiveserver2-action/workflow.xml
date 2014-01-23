@@ -1,0 +1,42 @@
+
+<workflow-app name="HiveServer2-security" xmlns="uri:oozie:workflow:0.4">
+  <credentials>
+    <credential name="hive2" type="hive2">
+      <property>
+        <name>hive2.jdbc.url</name>
+        <value>jdbc:hive2://test-cdh5-hue.ent.cloudera.com:10000/default</value>
+      </property>
+      <property>
+        <name>hive2.server.principal</name>
+        <value>hive/test-cdh5-hue.ent.cloudera.com@ENT.CLOUDERA.COM</value>
+      </property>
+    </credential>
+  </credentials>
+    <start to="simple_select"/>
+    <action name="simple_select" cred="hive2">
+        <hive xmlns="uri:oozie:hive-action:0.2">
+            <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+              <job-xml>hive-site3.xml</job-xml>
+            <configuration>
+                <property>
+                    <name>oozie.action.sharelib.for.hive</name>
+                    <value>hive2</value>
+                </property>
+                <property>
+                    <name>oozie.launcher.action.main.class</name>
+                    <value>org.apache.oozie.action.hadoop.Hive2Main</value>
+                </property>
+            </configuration>
+            <script>select_genericl.sql</script>
+              <param>connectString=${connectString}</param>
+              <param>tableName=${tableName}</param>
+        </hive>
+        <ok to="end"/>
+        <error to="kill"/>
+    </action>
+    <kill name="kill">
+        <message>Action failed, error message[${wf:errorMessage(wf:lastErrorNode())}]</message>
+    </kill>
+    <end name="end"/>
+</workflow-app>
