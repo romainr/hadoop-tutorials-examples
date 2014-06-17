@@ -11,7 +11,9 @@ https://github.com/tobie/ua-parser
 
 pip install pygeoip
 https://github.com/appliedsec/pygeoip
-http://dev.maxmind.com/geoip/legacy/geolite/
+
+Download http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.xz
+from http://dev.maxmind.com/geoip/legacy/geolite/
 
 Script is quick & dirty and given as an example.
 """
