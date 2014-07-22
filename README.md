@@ -4,9 +4,16 @@ Hadoop Tutorials and Examples
 Source, data and tutorials of the Hue video series, the [Web UI for Apache Hadoop](http://gethue.com).
 Follow [@gethue](https://twitter.com/gethue)
 
-List of all [tutorials](http://gethue.tumblr.com/tagged/tutorial).
+List of all [tutorials](http://gethue.com/category/tutorial/).
 
+Search
+- [Hadoop search: Dynamic search dashboards with Solr](http://gethue.com/hadoop-search-dynamic-search-dashboards-with-solr/)
+- [Analyse Apache logs and build your own Web Analytics dashboard with Hadoop and Solr](http://gethue.com/analyse-apache-logs-and-build-your-own-web-analytics-dashboard-with-hadoop-and-solr/)
 
+Spark
+- [Get started with Spark: deploy Spark Server and compute Pi from your Web Browser](http://gethue.com/get-started-with-spark-deploy-spark-server-and-compute-pi-from-your-web-browser/)
+
+Hive, HBase, Pig 
 - [Get started with Hadoop: Collect and Analyse Twitter data](http://gethue.tumblr.com/post/48706198060/how-to-analyze-twitter-data-with-hue) | [Hive, Flume, HDFS, Oozie](https://github.com/romainr/cdh-twitter-example)
 - [How to access Hive in Pig with HCatalog in Hue](http://gethue.tumblr.com/post/56804308712/hadoop-tutorial-how-to-access-hive-in-pig-with) | [HCatalog](hcatalog)
 - [High Availability of Hue](http://gethue.tumblr.com/post/57817118455/hadoop-tutorial-high-availability-of-hue) | [Hue HA](hue-ha)
