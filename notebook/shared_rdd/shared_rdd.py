@@ -1,15 +1,18 @@
 
 #
-# Start a ShareableRdd('states') on a remote Livy pypsark session.
-# pip install requests
+# Access a named RDD on a remote Livy PypSpark session that simulates a shared in memory key/value store.
+# To type in a regular Python shell.
+# Depends on: pip install requests
 # 
 
 import requests
 import json
 
 
-class SharedRdd2():
-  
+class SharedRdd():
+  """
+  Perform REST calls to a remote PySpark shell containing a Shared named RDD.
+  """  
   def __init__(self, session_url, name):
     self.session_url = session_url
     self.name = name
@@ -32,7 +35,7 @@ class SharedRdd2():
     return r.json()['data']
  
 
-states = SharedRdd2('http://localhost:8998/sessions/0', 'states')
+states = SharedRdd('http://localhost:8998/sessions/0', 'states')
 
 
 print states.get('ak')

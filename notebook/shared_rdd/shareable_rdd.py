@@ -1,5 +1,6 @@
 
-# To start in a Livy PySpark session
+# Start a named RDD on a remote Livy PypSpark session that simulates a shared in memory key/value store.
+# To start in a Livy PySpark session.
 
 class ShareableRdd():
   
@@ -14,16 +15,11 @@ class ShareableRdd():
     self.data = self.data.union(new_key)
     
 
-
-
 a = ShareableRdd()
 
 a.set('ak', 'Alaska')
 a.set('ca', 'California')
 
 
-
-
 a.get('ak')
-
 
