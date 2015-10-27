@@ -32,8 +32,12 @@ class SharedRdd():
     while resp['state'] == 'running':
       r = requests.get(statements_url + '/' + statement_id)
       resp = r.json()  
-    return r.json()['data']
- 
+
+    if 'output' in resp: # Case Livy returns automatically
+      return resp['output']['data']
+    else:
+      return resp['data']
+
 
 states = SharedRdd('http://localhost:8998/sessions/0', 'states')
 
