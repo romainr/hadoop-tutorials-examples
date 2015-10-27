@@ -1,6 +1,8 @@
-Blog URL
-========
+Blog
+====
 
-TBD
+[http://gethue.com/how-to-use-the-livy-spark-rest-job-server-api-for-sharing-spark-rdds-and-contexts/](How to use the Livy Spark REST Job Server API for sharing Spark RDDs and contexts])
 
-Follow-up of http://gethue.com/how-to-use-the-livy-spark-rest-job-server-for-interactive-spark/
+Read more on:
+http://gethue.com/spark/
+
