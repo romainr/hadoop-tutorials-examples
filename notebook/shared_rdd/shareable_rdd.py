@@ -8,7 +8,7 @@ class ShareableRdd():
     self.data = sc.parallelize([])
 
   def get(self, key):
-    return self.data.filter(lambda row: row[0] == key).take(1)
+    return self.data.filter(lambda row: row[0] == key).take(1)[0]
   
   def set(self, key, value):
     new_key = sc.parallelize([[key, value]])
