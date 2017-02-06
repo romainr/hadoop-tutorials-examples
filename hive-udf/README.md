@@ -1,7 +1,7 @@
 Blog URL
 ========
 
-[Build and use a Hive UDF in 1 minute](http://gethue.tumblr.com/post/58711590309/hadoop-tutorial-hive-udf-in-1-minute)
+[Build and use a Hive UDF in 1 minute](http://gethue.com/hadoop-tutorial-hive-udf-in-1-minute/)
 
 
 How to
