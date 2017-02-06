@@ -1,5 +1,5 @@
 Blog URL
 ========
 
-[High Availability of Hue](http://gethue.tumblr.com/post/57817118455/hadoop-tutorial-high-availability-of-hue) | [Hue HA](hue-ha)
+[High Availability of Hue](http://gethue.com/automatic-high-availability-with-hue-and-cloudera-manager/) | [Hue HA](hue-ha)
 
